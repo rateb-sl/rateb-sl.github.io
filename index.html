@@ -3,11 +3,11 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>Rateb Slik — Cloud Support Engineer, Berlin</title>
-<meta name="description" content="Cloud support engineer in Berlin. 5+ years at Meta, AWS re/Start graduate, writing about tech in public.">
+<title>Rateb Slik — Engineer, Berlin</title>
+<meta name="description" content="Engineer in Berlin. 5+ years at Meta scale, AWS re/Start graduate, writing about tech in public.">
 <meta name="theme-color" content="#050506">
-<meta property="og:title" content="Rateb Slik — Cloud Support Engineer, Berlin">
-<meta property="og:description" content="5+ years at Meta · AWS re/Start graduate · writing about tech in public.">
+<meta property="og:title" content="Rateb Slik — Engineer, Berlin">
+<meta property="og:description" content="5+ years at Meta scale · AWS re/Start graduate · writing about tech in public.">
 <link rel="icon" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'><rect width='100' height='100' rx='20' fill='%23050506'/><circle cx='50' cy='50' r='16' fill='none' stroke='%23EE3849' stroke-width='8'/></svg>">
 <link rel="stylesheet" href="styles.css">
 </head>
@@ -18,6 +18,13 @@
 <div class="glow" aria-hidden="true"></div>
 
 <main class="wrap">
+
+  <!-- 1. HERO -->
+  <h1 class="statement">
+    Engineer. 5 years at Meta scale.<br>
+    Now I build with AWS <span class="red">and write about it, in public.</span>
+  </h1>
+  <p class="hero-sub">Berlin · German B2+ · AWS re/Start graduate · on the path to Solutions Architect.</p>
 
   <section class="terminal" aria-label="Terminal introduction">
     <header class="term-bar">
@@ -30,37 +37,75 @@
     <div class="term-body" id="termBody" role="document">
       <p class="tline dim" data-line="Last login: Fri Aug 14 09:24 on ttys000"></p>
       <p class="tline" data-line="rateb@cloud:~$ whoami"></p>
-      <p class="tline out" data-line="rateb — cloud support engineer in Berlin"></p>
-      <p class="tline" data-line="rateb@cloud:~$ cat about.txt"></p>
-      <p class="tline out" data-line="I help people with technical problems —"></p>
-      <p class="tline out" data-line="5+ years of support at Meta. Now AWS."></p>
-      <p class="tline out" data-line="I write about what I learn, in public."></p>
-      <p class="tline" data-line="rateb@cloud:~$ ls skills/"></p>
-      <p class="tline out accent-zone" data-line="aws/  linux/  python/  network/  support/  german/"></p>
-      <p class="tline" data-line="rateb@cloud:~$ cat learning.txt"></p>
-      <p class="tline out accent-zone" data-line="AWS Solutions Architect — in progress"></p>
-      <p class="tline" data-line="rateb@cloud:~$ ./connect --github"></p>
-      <p class="tline out" data-line="→ github.com/rateb-sl"></p>
-      <p class="tline" data-line="rateb@cloud:~$ ./connect --linkedin"></p>
-      <p class="tline out" data-line="→ linkedin.com/in/rateb-slik"></p>
-      <p class="tline" data-line="rateb@cloud:~$ ./connect --substack"></p>
-      <p class="tline out" data-line="→ rateb.cc"></p>
+      <p class="tline out" data-line="→ engineer, Berlin"></p>
+      <p class="tline" data-line="rateb@cloud:~$ experience"></p>
+      <p class="tline out" data-line="→ 5+ years cloud support at Meta scale"></p>
+      <p class="tline" data-line="rateb@cloud:~$ now"></p>
+      <p class="tline out" data-line="→ AWS re/Start → Solutions Architect (in progress)"></p>
+      <p class="tline" data-line="rateb@cloud:~$ writing"></p>
+      <p class="tline out" data-line="→ rateb.cc — notes on cloud, weekly"></p>
       <p class="tline" id="cursorLine">rateb@cloud:~$ <span class="cursor" aria-hidden="true"></span></p>
     </div>
   </section>
 
-  <section class="skills" aria-label="Skills">
-    <h2 class="section-title">skills</h2>
-    <div class="chips">
-      <div class="chip reveal" style="--d:0ms"><span class="chip-name">aws</span><span class="chip-sub">compute · storage · networking · security</span></div>
-      <div class="chip reveal" style="--d:60ms"><span class="chip-name">linux</span><span class="chip-sub">systems · shell · automation</span></div>
-      <div class="chip reveal" style="--d:120ms"><span class="chip-name">python</span><span class="chip-sub">automation · cloud scripting</span></div>
-      <div class="chip reveal" style="--d:180ms"><span class="chip-name">support</span><span class="chip-sub">escalations · root cause · users first</span></div>
-      <div class="chip reveal" style="--d:240ms"><span class="chip-name">german</span><span class="chip-sub">B2+ · working language</span></div>
-      <div class="chip chip-learn reveal" style="--d:300ms"><span class="chip-name">learning</span><span class="chip-sub">AWS Solutions Architect · IaC · serverless</span></div>
+  <!-- 2. ABOUT -->
+  <section class="about" aria-label="About">
+    <h2 class="section-title">about</h2>
+    <p class="about-text">I've spent 5+ years solving technical problems for people at Meta scale — escalations, root cause, and the patience that comes with it. I'm now training as a cloud engineer, and I document everything I learn: the labs, the mistakes, the small wins.</p>
+  </section>
+
+  <!-- 3. PROOF -->
+  <section class="proof" aria-label="Proof">
+    <h2 class="section-title">proof</h2>
+    <div class="proof-grid">
+      <article class="proof-card reveal" style="--d:0ms">
+        <span class="tag">writing</span>
+        <h3>I write in public</h3>
+        <p>Weekly notes on cloud, support, and learning. No filler.</p>
+        <a class="link" href="https://www.rateb.cc" target="_blank" rel="noopener">→ rateb.cc</a>
+      </article>
+      <article class="proof-card reveal" style="--d:80ms">
+        <span class="tag">building</span>
+        <h3>Labs, live from GitHub</h3>
+        <p>Hands-on AWS &amp; Linux labs — published as I finish them. This list updates itself.</p>
+        <div class="labs-list" id="labsList">
+          <div class="lab-row"><span class="idx">·</span><span class="nm">loading labs…</span></div>
+        </div>
+        <div class="lab-sync"><span class="dot" aria-hidden="true"></span><span id="labSyncNote">syncing from github.com/rateb-sl/rateb-cloud-labs</span></div>
+      </article>
+      <article class="proof-card reveal" style="--d:160ms">
+        <span class="tag">support</span>
+        <h3>Support at Meta scale</h3>
+        <p>5+ years of escalations, root cause, and users first — the human layer of tech.</p>
+        <a class="link" href="https://www.linkedin.com/in/rateb-slik-0b6192a3/" target="_blank" rel="noopener">→ LinkedIn</a>
+      </article>
     </div>
   </section>
 
+  <!-- 4. WHAT I BRING -->
+  <section class="bring" aria-label="Skills">
+    <h2 class="section-title">what I bring</h2>
+    <div class="clusters">
+      <div class="cluster reveal" style="--d:0ms">
+        <span class="c-name">cloud — AWS</span>
+        <p class="c-body">compute · storage · networking · security.<br>Built in re/Start, proven in labs.</p>
+      </div>
+      <div class="cluster reveal" style="--d:60ms">
+        <span class="c-name">systems &amp; automation</span>
+        <p class="c-body">Linux · shell · Python — the ops layer that keeps things running.</p>
+      </div>
+      <div class="cluster reveal" style="--d:120ms">
+        <span class="c-name">support engineering</span>
+        <p class="c-body">escalations · root cause · users first. 5+ years at Meta scale.</p>
+      </div>
+      <div class="cluster learn reveal" style="--d:180ms">
+        <span class="c-name">learning now</span>
+        <p class="c-body">AWS Solutions Architect · infrastructure as code · serverless.</p>
+      </div>
+    </div>
+  </section>
+
+  <!-- 5. CONNECT -->
   <section class="connect" aria-label="Connect">
     <h2 class="section-title">connect</h2>
     <div class="links">
@@ -142,7 +187,7 @@
       entries.forEach(function (e) {
         if (e.isIntersecting) { e.target.classList.add("in"); io.unobserve(e.target); }
       });
-    }, { threshold: 0.15 });
+    }, { threshold: 0.12 });
     reveals.forEach(function (el) { io.observe(el); });
   }
 
@@ -165,7 +210,7 @@
     })();
   }
 
-  /* ================= scroll progress bar ================= */
+  /* ================= scroll progress ================= */
   var progress = document.getElementById("progress");
   function updateProgress() {
     var h = document.documentElement;
@@ -234,6 +279,68 @@
     }, { passive: true });
     window.addEventListener("resize", function () { resize(); seed(); }, { passive: true });
   }
+
+  /* ================= auto-updating labs widget ================= */
+  var list = document.getElementById("labsList");
+  var syncNote = document.getElementById("labSyncNote");
+  var CACHE_KEY = "rateb_labs_cache_v1";
+  var CACHE_TTL = 6 * 60 * 60 * 1000;
+
+  function prettify(name) {
+    return name
+      .replace(/^\d+-/, "")
+      .replace(/-/g, " ")
+      .replace(/\b\w/g, function (c) { return c.toUpperCase(); });
+  }
+
+  function renderLabs(labs) {
+    list.innerHTML = "";
+    labs.forEach(function (lab, i) {
+      var a = document.createElement("a");
+      a.className = "lab-row";
+      a.href = "https://github.com/rateb-sl/rateb-cloud-labs/tree/main/labs/" + lab.name;
+      a.target = "_blank"; a.rel = "noopener";
+      var idx = document.createElement("span"); idx.className = "idx";
+      idx.textContent = String(i + 1).padStart(2, "0");
+      var nm = document.createElement("span"); nm.className = "nm";
+      nm.textContent = prettify(lab.name);
+      var ar = document.createElement("span"); ar.className = "ar";
+      ar.textContent = "↗";
+      a.appendChild(idx); a.appendChild(nm); a.appendChild(ar);
+      list.appendChild(a);
+    });
+    syncNote.textContent = labs.length + " labs · synced from github.com/rateb-sl/rateb-cloud-labs";
+  }
+
+  function fallback() {
+    list.innerHTML = "";
+    var a = document.createElement("a");
+    a.className = "lab-row";
+    a.href = "https://github.com/rateb-sl/rateb-cloud-labs";
+    a.target = "_blank"; a.rel = "noopener";
+    a.innerHTML = '<span class="idx">!</span><span class="nm">open the full labs repo on GitHub</span><span class="ar">↗</span>';
+    list.appendChild(a);
+    syncNote.textContent = "live sync unavailable right now — link still works";
+  }
+
+  function loadLabs() {
+    try {
+      var cached = localStorage.getItem(CACHE_KEY);
+      if (cached) {
+        var data = JSON.parse(cached);
+        if (Date.now() - data.t < CACHE_TTL) { renderLabs(data.labs); return; }
+      }
+    } catch (e) {}
+    fetch("https://api.github.com/repos/rateb-sl/rateb-cloud-labs/contents/labs")
+      .then(function (r) { if (!r.ok) throw new Error("bad status"); return r.json(); })
+      .then(function (items) {
+        var labs = items.filter(function (i) { return i.type === "dir"; });
+        renderLabs(labs);
+        try { localStorage.setItem(CACHE_KEY, JSON.stringify({ t: Date.now(), labs: labs })); } catch (e) {}
+      })
+      .catch(fallback);
+  }
+  loadLabs();
 
   document.getElementById("year").textContent = new Date().getFullYear();
 })();
