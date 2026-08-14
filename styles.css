@@ -1,5 +1,5 @@
 /* ============================================================
-   Rateb Slik — landing page v2
+   Rateb Slik — landing page v3
    Terminal × Apple · black core + #EE3849 · NType 82 family
    ============================================================ */
 
@@ -61,6 +61,17 @@ body {
 ::-webkit-scrollbar-thumb { background: #1c1c21; border-radius: 5px; }
 ::-webkit-scrollbar-thumb:hover { background: var(--red); }
 
+/* ---------- scroll progress ---------- */
+#progress {
+  position: fixed;
+  top: 0; left: 0;
+  height: 2px;
+  width: 0%;
+  background: linear-gradient(90deg, var(--red), rgba(238, 56, 73, 0.35));
+  box-shadow: 0 0 8px rgba(238, 56, 73, 0.5);
+  z-index: 50;
+}
+
 /* ---------- background ---------- */
 #bg {
   position: fixed;
@@ -102,7 +113,6 @@ body {
     0 2px 8px rgba(0, 0, 0, 0.5);
   backdrop-filter: blur(20px) saturate(1.2);
   -webkit-backdrop-filter: blur(20px) saturate(1.2);
-  transition: box-shadow 0.7s var(--spring);
   transform-style: preserve-3d;
   will-change: transform;
 }
@@ -218,6 +228,12 @@ body {
   margin-bottom: 24px;
 }
 .section-title::before { content: "# "; color: var(--red); }
+.section-title::after {
+  content: "▮";
+  margin-left: 10px;
+  color: var(--red);
+  animation: blink 1.4s steps(1) infinite;
+}
 
 /* ---------- skill chips ---------- */
 .chips {
@@ -257,6 +273,18 @@ body {
   white-space: nowrap;
 }
 
+/* learning chip — the growth story, red-edged */
+.chip-learn {
+  border-color: rgba(238, 56, 73, 0.45);
+  background: var(--red-soft);
+}
+.chip-learn .chip-name::before { content: "~ "; }
+.chip-learn:hover {
+  border-color: var(--red);
+  background: rgba(238, 56, 73, 0.18);
+  box-shadow: 0 14px 34px -14px rgba(238, 56, 73, 0.45), 0 0 0 1px rgba(238, 56, 73, 0.3);
+}
+
 /* ---------- connect ---------- */
 .links { display: flex; flex-wrap: wrap; gap: 14px; }
 
@@ -265,7 +293,7 @@ body {
   display: inline-flex;
   align-items: center;
   gap: 12px;
-  padding: 15px 24px;
+  padding: 15px 26px;
   border-radius: 999px;
   border: 1px solid var(--line);
   background: rgba(255, 255, 255, 0.03);
@@ -274,13 +302,16 @@ body {
   font-size: 16px;
   text-decoration: none;
   overflow: hidden;
-  transition: border-color 0.4s var(--spring), background 0.4s var(--spring), box-shadow 0.4s var(--spring);
-  will-change: transform;
+  transition: border-color 0.4s var(--spring), background 0.4s var(--spring), box-shadow 0.4s var(--spring), transform 0.25s var(--spring);
 }
 .btn:hover {
+  transform: translateY(-2px);
   border-color: rgba(255, 255, 255, 0.28);
   background: rgba(255, 255, 255, 0.06);
   box-shadow: 0 12px 34px -14px rgba(0, 0, 0, 0.9);
+}
+.btn:active {
+  transform: scale(0.97);
 }
 
 /* shine sweep */
@@ -311,13 +342,6 @@ body {
 
 .btn-arrow { color: var(--red); transition: transform 0.4s var(--spring); }
 .btn:hover .btn-arrow { transform: translateX(3px); }
-
-.btn-meta {
-  font-family: var(--mono);
-  font-size: 12.5px;
-  color: var(--dim);
-  letter-spacing: 0.03em;
-}
 
 /* ---------- footer ---------- */
 .foot { margin-top: 96px; padding-top: 28px; border-top: 1px solid var(--line); }
@@ -350,6 +374,7 @@ body {
     transition-duration: 0.01ms !important;
   }
   .terminal, .reveal { opacity: 1; transform: none; filter: none; }
+  #progress { display: none; }
 }
 
 /* ---------- small screens ---------- */
