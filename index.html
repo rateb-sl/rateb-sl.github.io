@@ -3,23 +3,22 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>Rateb Slik — Cloud Support &amp; AWS Engineer</title>
-<meta name="description" content="Rateb Slik — cloud support & AWS engineer in Berlin. AWS re/Start graduate, 5+ years technical support, building in public.">
+<title>Rateb Slik — Cloud Support Engineer, Berlin</title>
+<meta name="description" content="Cloud support engineer in Berlin. AWS re/Start graduate, 5+ years technical support, building cloud labs in public.">
 <meta name="theme-color" content="#050506">
-<meta property="og:title" content="Rateb Slik — Cloud Support & AWS Engineer">
-<meta property="og:description" content="AWS re/Start graduate · 5+ years technical support · Berlin. Building in public.">
+<meta property="og:title" content="Rateb Slik — Cloud Support Engineer, Berlin">
+<meta property="og:description" content="AWS re/Start graduate · 5+ years technical support · Building cloud labs in public.">
 <link rel="icon" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'><rect width='100' height='100' rx='20' fill='%23050506'/><circle cx='50' cy='50' r='16' fill='none' stroke='%23EE3849' stroke-width='8'/></svg>">
 <link rel="stylesheet" href="styles.css">
 </head>
 <body>
 
-<!-- Ambient glow -->
+<canvas id="bg" aria-hidden="true"></canvas>
 <div class="glow" aria-hidden="true"></div>
 
 <main class="wrap">
 
-  <!-- macOS-style terminal window -->
-  <section class="terminal reveal" aria-label="Terminal introduction">
+  <section class="terminal" aria-label="Terminal introduction">
     <header class="term-bar">
       <div class="lights" aria-hidden="true">
         <span class="light"></span><span class="light"></span><span class="light"></span>
@@ -30,73 +29,49 @@
     <div class="term-body" id="termBody" role="document">
       <p class="tline dim" data-line="Last login: Fri Aug 14 09:24 on ttys000"></p>
       <p class="tline" data-line="rateb@cloud:~$ whoami"></p>
-      <p class="tline out" data-line="rateb — cloud support &amp; AWS engineer · Berlin"></p>
-      <p class="tline" data-line="rateb@cloud:~$ cat about.txt"></p>
-      <p class="tline out" data-line="AWS re/Start graduate. 5+ years technical support"></p>
-      <p class="tline out" data-line="(Concentrix · Meta). German B2+. Building in public."></p>
+      <p class="tline out" data-line="rateb — cloud support engineer in Berlin"></p>
+      <p class="tline" data-line="rateb@cloud:~$ cat experience.txt"></p>
+      <p class="tline out" data-line="5+ years in technical support at scale"></p>
+      <p class="tline out" data-line="Concentrix · Meta. Troubleshooting, escalations, users first."></p>
+      <p class="tline" data-line="rateb@cloud:~$ cat now.txt"></p>
+      <p class="tline out" data-line="AWS re/Start graduate. Building cloud labs"></p>
+      <p class="tline out" data-line="in public. Looking for my first cloud role."></p>
       <p class="tline" data-line="rateb@cloud:~$ ls skills/"></p>
-      <p class="tline out accent-zone" data-line="aws/   linux/   networking/   python/   support/   german-b2/"></p>
+      <p class="tline out accent-zone" data-line="aws/   linux/   python/   support/   german/"></p>
       <p class="tline" data-line="rateb@cloud:~$ ./connect --github"></p>
       <p class="tline out" data-line="→ https://github.com/rateb-sl"></p>
       <p class="tline" data-line="rateb@cloud:~$ ./connect --linkedin"></p>
-      <p class="tline out" data-line="→ https://www.linkedin.com/in/rateb-slik"></p>
+      <p class="tline out" data-line="→ linkedin.com/in/rateb-slik-0b6192a3"></p>
       <p class="tline" id="cursorLine">rateb@cloud:~$ <span class="cursor" aria-hidden="true"></span></p>
     </div>
   </section>
 
-  <!-- Skills -->
-  <section class="skills" aria-labelledby="skills-heading">
-    <h2 id="skills-heading" class="section-title reveal">Skills</h2>
-    <div class="grid">
-      <article class="card reveal" style="--d:0ms">
-        <span class="card-tag">aws</span>
-        <p class="card-text">EC2 · S3 · VPC · IAM — designing and debugging real workloads, not just passing exams.</p>
-      </article>
-      <article class="card reveal" style="--d:60ms">
-        <span class="card-tag">linux</span>
-        <p class="card-text">Daily driver: shell, filesystem, permissions, services. Comfortable end-to-end in a terminal.</p>
-      </article>
-      <article class="card reveal" style="--d:120ms">
-        <span class="card-tag">networking</span>
-        <p class="card-text">TCP/IP, DNS, routing — tracing a broken request to its root cause.</p>
-      </article>
-      <article class="card reveal" style="--d:180ms">
-        <span class="card-tag">python</span>
-        <p class="card-text">Automation and scripting for real ops tasks — less manual clicking, fewer mistakes.</p>
-      </article>
-      <article class="card reveal" style="--d:240ms">
-        <span class="card-tag">support</span>
-        <p class="card-text">5+ years technical support at scale (Concentrix · Meta). Escalations, root cause, users first.</p>
-      </article>
-      <article class="card reveal" style="--d:300ms">
-        <span class="card-tag">communication</span>
-        <p class="card-text">German B2+ · English. Clear, patient, technical — the human layer of cloud work.</p>
-      </article>
+  <section class="skills" aria-label="Skills">
+    <h2 class="section-title">skills</h2>
+    <div class="chips">
+      <div class="chip reveal" style="--d:0ms"><span class="chip-name">aws</span><span class="chip-sub">EC2 · S3 · VPC · IAM</span></div>
+      <div class="chip reveal" style="--d:60ms"><span class="chip-name">linux</span><span class="chip-sub">shell · servers · permissions</span></div>
+      <div class="chip reveal" style="--d:120ms"><span class="chip-name">python</span><span class="chip-sub">automation scripts</span></div>
+      <div class="chip reveal" style="--d:180ms"><span class="chip-name">support</span><span class="chip-sub">escalations · root cause</span></div>
+      <div class="chip reveal" style="--d:240ms"><span class="chip-name">german</span><span class="chip-sub">B2+ · working language</span></div>
     </div>
   </section>
 
-  <!-- Now / About -->
-  <section class="now reveal" aria-labelledby="now-heading">
-    <h2 id="now-heading" class="section-title">Now</h2>
-    <p class="now-text">Working toward my first cloud engineering role in Berlin — building labs, writing notes in public, and turning years of support experience into infrastructure that stays up.</p>
-  </section>
-
-  <!-- Connect -->
-  <section class="connect reveal" aria-labelledby="connect-heading">
-    <h2 id="connect-heading" class="section-title">Connect</h2>
+  <section class="connect" aria-label="Connect">
+    <h2 class="section-title">connect</h2>
     <div class="links">
-      <a class="btn" href="https://github.com/rateb-sl" target="_blank" rel="noopener">
+      <a class="btn reveal" style="--d:0ms" href="https://github.com/rateb-sl" target="_blank" rel="noopener">
         <span class="btn-arrow">→</span> GitHub <span class="btn-meta">/rateb-sl</span>
       </a>
-      <a class="btn btn-red" href="https://www.linkedin.com/in/rateb-slik" target="_blank" rel="noopener">
-        <span class="btn-arrow">→</span> LinkedIn <span class="btn-meta">in/rateb-slik</span>
+      <a class="btn btn-red reveal" style="--d:80ms" href="https://www.linkedin.com/in/rateb-slik-0b6192a3/" target="_blank" rel="noopener">
+        <span class="btn-arrow">→</span> LinkedIn <span class="btn-meta">in/rateb-slik-0b6192a3</span>
       </a>
     </div>
   </section>
 
-  <footer class="foot reveal">
-    <p class="tline">rateb@cloud:~$ exit</p>
-    <p class="foot-note">© <span id="year">2026</span> Rateb Slik · built with Hermes · hosted on GitHub Pages</p>
+  <footer class="foot">
+    <p class="tline exit">rateb@cloud:~$ exit</p>
+    <p class="foot-note">© <span id="year">2026</span> Rateb Slik · Berlin</p>
   </footer>
 
 </main>
@@ -105,47 +80,33 @@
 (function () {
   var reduce = window.matchMedia("(prefers-reduced-motion: reduce)").matches;
 
-  /* ---- terminal typewriter ---- */
+  /* ================= terminal typewriter ================= */
   var lines = Array.prototype.slice.call(document.querySelectorAll(".tline[data-line]"));
   var cursorLine = document.getElementById("cursorLine");
-  var idx = 0;
-  var done = false;
+  var idx = 0, done = false;
 
   function speedFor(text) {
-    // commands type at human speed, output lines blur through fast
-    return /\$/.test(text) ? 12 + Math.random() * 16 : 3 + Math.random() * 9;
+    return /\$/.test(text) ? 10 + Math.random() * 10 : 2 + Math.random() * 6;
   }
-
   function typeLine(el, text, onDone) {
     var i = 0;
     (function step() {
       el.textContent = text.slice(0, i);
-      if (i <= text.length) {
-        i++;
-        setTimeout(step, reduce ? 0 : speedFor(text));
-      } else {
-        el.textContent = text;
-        onDone();
-      }
+      if (i <= text.length) { i++; setTimeout(step, reduce ? 0 : speedFor(text)); }
+      else { el.textContent = text; onDone(); }
     })();
   }
-
   function play() {
     if (idx >= lines.length) { finish(); return; }
     var el = lines[idx];
     el.classList.add("show");
-    if (reduce) {
-      el.textContent = el.getAttribute("data-line").replace(/&amp;/g, "&");
-      idx++;
-      play();
-    } else {
+    if (reduce) { el.textContent = el.getAttribute("data-line").replace(/&amp;/g, "&"); idx++; play(); }
+    else {
       typeLine(el, el.getAttribute("data-line").replace(/&amp;/g, "&"), function () {
-        idx++;
-        setTimeout(play, 90);
+        idx++; setTimeout(play, 90);
       });
     }
   }
-
   function finish() {
     if (done) return;
     done = true;
@@ -154,30 +115,135 @@
       el.textContent = el.getAttribute("data-line").replace(/&amp;/g, "&");
     });
     cursorLine.classList.add("show");
+    cursorLine.style.opacity = "1";
   }
-
-  // click anywhere on the terminal → skip the typing
   document.getElementById("termBody").addEventListener("click", finish, { once: true });
+  setTimeout(play, reduce ? 100 : 350);
 
-  setTimeout(play, reduce ? 100 : 450);
+  /* ================= entrance ================= */
+  document.body.classList.add("load");
+  setTimeout(function () {
+    document.querySelector(".terminal").classList.add("in");
+    // after the entrance finishes, drop the transform transition so the
+    // tilt effect runs on its own spring instead of fighting the CSS one
+    setTimeout(function () { document.querySelector(".terminal").classList.add("settled"); }, reduce ? 0 : 1100);
+  }, reduce ? 50 : 150);
 
-  /* ---- scroll reveal (Apple-style spring) ---- */
+  /* ================= scroll reveal ================= */
   var reveals = document.querySelectorAll(".reveal");
   if (reduce || !("IntersectionObserver" in window)) {
     reveals.forEach(function (el) { el.classList.add("in"); });
   } else {
     var io = new IntersectionObserver(function (entries) {
-      entries.forEach(function (entry) {
-        if (entry.isIntersecting) {
-          entry.target.classList.add("in");
-          io.unobserve(entry.target);
-        }
+      entries.forEach(function (e) {
+        if (e.isIntersecting) { e.target.classList.add("in"); io.unobserve(e.target); }
       });
-    }, { threshold: 0.12 });
+    }, { threshold: 0.15 });
     reveals.forEach(function (el) { io.observe(el); });
   }
 
-  /* ---- year ---- */
+  /* ================= magnetic buttons ================= */
+  var btns = document.querySelectorAll(".btn");
+  function magnetic(e) {
+    var r = btns[0].getBoundingClientRect();
+    if (r.width === 0) return;
+    btns.forEach(function (b) {
+      var br = b.getBoundingClientRect();
+      var cx = br.left + br.width / 2, cy = br.top + br.height / 2;
+      var dx = e.clientX - cx, dy = e.clientY - cy;
+      var dist = Math.hypot(dx, dy);
+      var radius = Math.max(br.width, br.height) * 2.2;
+      if (dist < radius) {
+        // own spring once the reveal has settled, so the pull is smooth
+        b.style.transition = "transform 0.3s cubic-bezier(0.22,1,0.36,1)";
+        b.style.transform = "translate(" + dx * 0.12 + "px, " + dy * 0.12 + "px)";
+      } else {
+        b.style.transition = "";
+        b.style.transform = "";
+      }
+    });
+  }
+  if (!reduce && window.matchMedia("(pointer: fine)").matches) {
+    window.addEventListener("mousemove", magnetic, { passive: true });
+  }
+
+  /* ================= terminal tilt ================= */
+  var term = document.querySelector(".terminal");
+  if (!reduce && window.matchMedia("(pointer: fine)").matches) {
+    var tx = 0, ty = 0, rx = 0, ry = 0, targetRX = 0, targetRY = 0, raf = null;
+    term.addEventListener("mousemove", function (e) {
+      var r = term.getBoundingClientRect();
+      var px = (e.clientX - r.left) / r.width - 0.5;
+      var py = (e.clientY - r.top) / r.height - 0.5;
+      targetRY = px * 3;   // ±1.5°
+      targetRX = -py * 3;
+    });
+    term.addEventListener("mouseleave", function () { targetRX = 0; targetRY = 0; });
+    (function loop() {
+      rx += (targetRX - rx) * 0.08; ry += (targetRY - ry) * 0.08;
+      term.style.transform = "perspective(1200px) rotateX(" + rx.toFixed(2) + "deg) rotateY(" + ry.toFixed(2) + "deg)";
+      raf = requestAnimationFrame(loop);
+    })();
+  }
+
+  /* ================= background particles + glow ================= */
+  var canvas = document.getElementById("bg");
+  var ctx = canvas.getContext("2d");
+  var W, H, parts = [];
+  var mouseX = 0.5, mouseY = 0.3, glowX = 0.5, glowY = 0.3;
+  var glow = document.querySelector(".glow");
+
+  function resize() {
+    W = canvas.width = window.innerWidth;
+    H = canvas.height = window.innerHeight;
+  }
+  function seed() {
+    var count = Math.min(70, Math.floor(W / 22));
+    parts = [];
+    for (var i = 0; i < count; i++) {
+      parts.push({
+        x: Math.random() * W,
+        y: Math.random() * H,
+        r: 0.6 + Math.random() * 1.4,
+        vx: (Math.random() - 0.5) * 0.16,
+        vy: -(0.05 + Math.random() * 0.14),
+        red: Math.random() < 0.12
+      });
+    }
+  }
+  function tick() {
+    ctx.clearRect(0, 0, W, H);
+    for (var i = 0; i < parts.length; i++) {
+      var p = parts[i];
+      p.x += p.vx; p.y += p.vy;
+      if (p.y < -4) { p.y = H + 4; p.x = Math.random() * W; }
+      if (p.x < -4) p.x = W + 4; else if (p.x > W + 4) p.x = -4;
+      var a = 0.14 + 0.18 * (p.y / H);
+      ctx.beginPath();
+      ctx.arc(p.x, p.y, p.r, 0, 6.2832);
+      ctx.fillStyle = p.red ? "rgba(238,56,73," + a * 1.6 + ")" : "rgba(255,255,255," + a + ")";
+      ctx.fill();
+    }
+    if (!reduce && window.matchMedia("(pointer: fine)").matches) {
+      glowX += (mouseX - glowX) * 0.04; glowY += (mouseY - glowY) * 0.04;
+      glow.style.transform = "translate(" + (glowX * 30 - 15) + "px, " + (glowY * 30 - 15) + "px)";
+    }
+    requestAnimationFrame(tick);
+  }
+  if (reduce) {
+    canvas.style.display = "none";
+    glow.style.display = "none";
+  } else {
+    resize();
+    seed();
+    tick();
+    window.addEventListener("mousemove", function (e) {
+      mouseX = e.clientX / window.innerWidth;
+      mouseY = e.clientY / window.innerHeight;
+    }, { passive: true });
+    window.addEventListener("resize", function () { resize(); seed(); }, { passive: true });
+  }
+
   document.getElementById("year").textContent = new Date().getFullYear();
 })();
 </script>
