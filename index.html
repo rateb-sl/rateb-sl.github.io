@@ -1,0 +1,185 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Rateb Slik — Cloud Support &amp; AWS Engineer</title>
+<meta name="description" content="Rateb Slik — cloud support & AWS engineer in Berlin. AWS re/Start graduate, 5+ years technical support, building in public.">
+<meta name="theme-color" content="#050506">
+<meta property="og:title" content="Rateb Slik — Cloud Support & AWS Engineer">
+<meta property="og:description" content="AWS re/Start graduate · 5+ years technical support · Berlin. Building in public.">
+<link rel="icon" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'><rect width='100' height='100' rx='20' fill='%23050506'/><circle cx='50' cy='50' r='16' fill='none' stroke='%23EE3849' stroke-width='8'/></svg>">
+<link rel="stylesheet" href="styles.css">
+</head>
+<body>
+
+<!-- Ambient glow -->
+<div class="glow" aria-hidden="true"></div>
+
+<main class="wrap">
+
+  <!-- macOS-style terminal window -->
+  <section class="terminal reveal" aria-label="Terminal introduction">
+    <header class="term-bar">
+      <div class="lights" aria-hidden="true">
+        <span class="light"></span><span class="light"></span><span class="light"></span>
+      </div>
+      <div class="term-title">rateb — zsh — 80×24</div>
+      <div class="term-spacer" aria-hidden="true"></div>
+    </header>
+    <div class="term-body" id="termBody" role="document">
+      <p class="tline dim" data-line="Last login: Fri Aug 14 09:24 on ttys000"></p>
+      <p class="tline" data-line="rateb@cloud:~$ whoami"></p>
+      <p class="tline out" data-line="rateb — cloud support &amp; AWS engineer · Berlin"></p>
+      <p class="tline" data-line="rateb@cloud:~$ cat about.txt"></p>
+      <p class="tline out" data-line="AWS re/Start graduate. 5+ years technical support"></p>
+      <p class="tline out" data-line="(Concentrix · Meta). German B2+. Building in public."></p>
+      <p class="tline" data-line="rateb@cloud:~$ ls skills/"></p>
+      <p class="tline out accent-zone" data-line="aws/   linux/   networking/   python/   support/   german-b2/"></p>
+      <p class="tline" data-line="rateb@cloud:~$ ./connect --github"></p>
+      <p class="tline out" data-line="→ https://github.com/rateb-sl"></p>
+      <p class="tline" data-line="rateb@cloud:~$ ./connect --linkedin"></p>
+      <p class="tline out" data-line="→ https://www.linkedin.com/in/rateb-slik"></p>
+      <p class="tline" id="cursorLine">rateb@cloud:~$ <span class="cursor" aria-hidden="true"></span></p>
+    </div>
+  </section>
+
+  <!-- Skills -->
+  <section class="skills" aria-labelledby="skills-heading">
+    <h2 id="skills-heading" class="section-title reveal">Skills</h2>
+    <div class="grid">
+      <article class="card reveal" style="--d:0ms">
+        <span class="card-tag">aws</span>
+        <p class="card-text">EC2 · S3 · VPC · IAM — designing and debugging real workloads, not just passing exams.</p>
+      </article>
+      <article class="card reveal" style="--d:60ms">
+        <span class="card-tag">linux</span>
+        <p class="card-text">Daily driver: shell, filesystem, permissions, services. Comfortable end-to-end in a terminal.</p>
+      </article>
+      <article class="card reveal" style="--d:120ms">
+        <span class="card-tag">networking</span>
+        <p class="card-text">TCP/IP, DNS, routing — tracing a broken request to its root cause.</p>
+      </article>
+      <article class="card reveal" style="--d:180ms">
+        <span class="card-tag">python</span>
+        <p class="card-text">Automation and scripting for real ops tasks — less manual clicking, fewer mistakes.</p>
+      </article>
+      <article class="card reveal" style="--d:240ms">
+        <span class="card-tag">support</span>
+        <p class="card-text">5+ years technical support at scale (Concentrix · Meta). Escalations, root cause, users first.</p>
+      </article>
+      <article class="card reveal" style="--d:300ms">
+        <span class="card-tag">communication</span>
+        <p class="card-text">German B2+ · English. Clear, patient, technical — the human layer of cloud work.</p>
+      </article>
+    </div>
+  </section>
+
+  <!-- Now / About -->
+  <section class="now reveal" aria-labelledby="now-heading">
+    <h2 id="now-heading" class="section-title">Now</h2>
+    <p class="now-text">Working toward my first cloud engineering role in Berlin — building labs, writing notes in public, and turning years of support experience into infrastructure that stays up.</p>
+  </section>
+
+  <!-- Connect -->
+  <section class="connect reveal" aria-labelledby="connect-heading">
+    <h2 id="connect-heading" class="section-title">Connect</h2>
+    <div class="links">
+      <a class="btn" href="https://github.com/rateb-sl" target="_blank" rel="noopener">
+        <span class="btn-arrow">→</span> GitHub <span class="btn-meta">/rateb-sl</span>
+      </a>
+      <a class="btn btn-red" href="https://www.linkedin.com/in/rateb-slik" target="_blank" rel="noopener">
+        <span class="btn-arrow">→</span> LinkedIn <span class="btn-meta">in/rateb-slik</span>
+      </a>
+    </div>
+  </section>
+
+  <footer class="foot reveal">
+    <p class="tline">rateb@cloud:~$ exit</p>
+    <p class="foot-note">© <span id="year">2026</span> Rateb Slik · built with Hermes · hosted on GitHub Pages</p>
+  </footer>
+
+</main>
+
+<script>
+(function () {
+  var reduce = window.matchMedia("(prefers-reduced-motion: reduce)").matches;
+
+  /* ---- terminal typewriter ---- */
+  var lines = Array.prototype.slice.call(document.querySelectorAll(".tline[data-line]"));
+  var cursorLine = document.getElementById("cursorLine");
+  var idx = 0;
+  var done = false;
+
+  function speedFor(text) {
+    // commands type at human speed, output lines blur through fast
+    return /\$/.test(text) ? 12 + Math.random() * 16 : 3 + Math.random() * 9;
+  }
+
+  function typeLine(el, text, onDone) {
+    var i = 0;
+    (function step() {
+      el.textContent = text.slice(0, i);
+      if (i <= text.length) {
+        i++;
+        setTimeout(step, reduce ? 0 : speedFor(text));
+      } else {
+        el.textContent = text;
+        onDone();
+      }
+    })();
+  }
+
+  function play() {
+    if (idx >= lines.length) { finish(); return; }
+    var el = lines[idx];
+    el.classList.add("show");
+    if (reduce) {
+      el.textContent = el.getAttribute("data-line").replace(/&amp;/g, "&");
+      idx++;
+      play();
+    } else {
+      typeLine(el, el.getAttribute("data-line").replace(/&amp;/g, "&"), function () {
+        idx++;
+        setTimeout(play, 90);
+      });
+    }
+  }
+
+  function finish() {
+    if (done) return;
+    done = true;
+    lines.forEach(function (el) {
+      el.classList.add("show");
+      el.textContent = el.getAttribute("data-line").replace(/&amp;/g, "&");
+    });
+    cursorLine.classList.add("show");
+  }
+
+  // click anywhere on the terminal → skip the typing
+  document.getElementById("termBody").addEventListener("click", finish, { once: true });
+
+  setTimeout(play, reduce ? 100 : 450);
+
+  /* ---- scroll reveal (Apple-style spring) ---- */
+  var reveals = document.querySelectorAll(".reveal");
+  if (reduce || !("IntersectionObserver" in window)) {
+    reveals.forEach(function (el) { el.classList.add("in"); });
+  } else {
+    var io = new IntersectionObserver(function (entries) {
+      entries.forEach(function (entry) {
+        if (entry.isIntersecting) {
+          entry.target.classList.add("in");
+          io.unobserve(entry.target);
+        }
+      });
+    }, { threshold: 0.12 });
+    reveals.forEach(function (el) { io.observe(el); });
+  }
+
+  /* ---- year ---- */
+  document.getElementById("year").textContent = new Date().getFullYear();
+})();
+</script>
+</body>
+</html>
